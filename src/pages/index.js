@@ -43,9 +43,6 @@ export default function Home({ data }) { //можно так а можно до�
     setState(false);
   }
 
-  // console.log(data.images)
-
-
   const imagesMap = data.wpPage.acField.gallery.map((node, key) => {
     return <img className="grid-item" onClick={() => {
       setOpen(true)
@@ -226,7 +223,7 @@ query MyQuery {
       date(locale: "ru", formatString: "MM DD, YY.")
     }
   }
-  wpPage {
+  wpPage(slug: {eq: "mazda"}) {
     seo {
       breadcrumbs {
         text

@@ -13,11 +13,12 @@
 
 
 module.exports = {
+
   siteMetadata: {
     title: 'Mazda vision',
     description: 'Global Website of Mazda Motor Corporation - brand stories, design and technology as well as company profile, IR and CSR.',
     image: '/static/logo.svg',
-    url: 'https://mazdavision.com'
+
   },
   plugins: [{
     resolve: `gatsby-source-filesystem`,

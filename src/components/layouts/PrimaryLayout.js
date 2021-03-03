@@ -11,7 +11,7 @@ const PrimaryLayout = (props) => {
 
    const data = useStaticQuery(graphql`
       query MenuQuery {
-         wpPage {
+         wpPage(slug: {eq: "mazda"}) {
             acField {
                footerTitle
                leftFooterImg{
