@@ -1,15 +1,14 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Header from "../Header";
-import Footer from "../Footer";
+import PrimaryLayout from "./PrimaryLayout"
 
 
 
 const BlogpostLayout = ({ data }) => {
    const title = data.wpPost.title
    const html = data.wpPost.content
-   return <div>
-      <Header />
+   return <PrimaryLayout>
+
       <div className="container">
          <div className="">
             <h1>{title}</h1>
@@ -17,8 +16,7 @@ const BlogpostLayout = ({ data }) => {
             </div>
          </div>
       </div>
-      <Footer />
-   </div>
+   </PrimaryLayout>
 }
 
 
