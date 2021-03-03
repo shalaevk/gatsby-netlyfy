@@ -1,0 +1,357 @@
+:root {
+   --white-color: #fff;
+   --text-color: #909090;
+   --bg-color: #4B4B4B;
+   --second-bg-color: #262626;
+   --accent-color: #C72040;
+   --heade-title-font: 40px;
+   --black-bg: #000;
+   
+   --the-biggest-title: 80px;
+   --headline-size: 40px;
+   --text-weight: 400;
+   --title: 30px;
+   --subheader: 20px;
+
+   --signature-font: "Tuesday Night";
+   
+   --paragraph-text: 14px;
+   --second-paragraph: 12px;
+ }
+ /* Play Button */
+ .playBtn{
+   align-items: center;
+ }
+ .playBtn img{
+    margin-right: 10px;
+ }
+.playBtn span{
+      text-transform: uppercase;
+      font-size: 16px;
+}
+.playBtn:hover{
+   opacity: 0.7;
+   cursor: pointer;
+   transition: all 0.3s;
+}
+ /* End Play Button */
+
+
+
+
+/* Modal Stiles */
+.modal {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width:100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.6);
+}
+ .modal-main {
+     position:fixed;
+     background: white;
+     width: 80%;
+     height: auto;
+     top:50%;
+     left:50%;
+     transform: translate(-50%,-50%);
+}
+.display-block {
+   display: block;
+}
+.display-none {
+   display: none;
+}
+.close-btn{
+   position: absolute;
+   top: 0;
+   right: -30px;
+} 
+
+
+/* Modal Styles End */
+
+body{
+   min-height: 100vh;
+   position: relative;
+   margin: 0;
+   color: var(--white-color);
+   background-color:var(--bg-color);
+}
+.navbar{
+   color: var(--white-color);
+   background-color:transparent;
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   width: 100%;
+}
+.navbar-light .navbar-nav .nav-link {
+   color: var(--white-color);
+}
+.main-container{
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: 50% 50%;
+   min-height: 100vh;
+   min-width: 100%;
+   /* padding-top: 112px; */
+}
+.findBtn{
+   border-radius: 30px;
+   background-color: var(--text-color);
+   border: none;
+   margin-right: 20px;
+}
+.btnWrap{
+   align-items: baseline;
+   padding: 30px;
+}
+.mine-title-wrap{
+   transform: translateY(-50%);
+}
+.main-title{
+font-size: var(--the-biggest-title);
+letter-spacing: 5px;
+}
+.main-subtitle{
+font-size: 20px;
+letter-spacing:  15px;
+}
+.video-section  {
+   padding-top: 75px;
+}
+.title-wrap{
+
+}
+.headline-title{
+   font-size: var(--headline-size);
+   font-weight: var(--text-weight);
+   max-width: 13em;
+   margin: 0 auto;
+   line-height: 60px;
+}
+.title-wrap{
+   margin: 0 auto;
+}
+.description{
+   color: var(--text-color);
+   font-weight: var(--text-weight);
+   padding-top: 40px;
+}
+.item__thumb
+{
+   width: 376px;
+   height: 303px;
+}
+.video-wrap{
+   padding-top: 110px;
+}
+/* .video-left-wrap, .right-video-wrap{
+   padding: 30px;
+} */
+.video-left-wrap{
+   padding-right: 0;
+}
+.left-video-title{
+   font-size: var(--title);
+   font-weight: var(--text-weight);
+   color: var(--white-color);
+   text-transform: uppercase;
+}
+.left-video-description{
+   color: var(--text-color)
+}
+.video-left-wrap, .video-right-wrap {
+   flex-wrap: nowrap;
+}
+.video-left-wrap{
+   width: 60%;
+}
+.video-right-wrap {
+   border-left: 1px solid #707070;
+   margin-left: 75px;
+   padding-left: 35px;
+   width: 40%;
+}
+.video-text{
+max-width: 350px;
+}
+.video-img{
+   position: relative;
+   max-width: 376px;
+   max-height: 303px;
+}
+.play-btn{
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   left: 0;
+   right: 0;
+   margin: 0 auto;
+}
+.play-btn:hover{
+   cursor: pointer;
+   opacity: 0.7;
+   transition: all 0.3s;
+}
+.gen-section{
+   padding: 0;
+}
+
+.video-right-wrap{
+   flex-direction: column;
+}
+.right-video-image{
+   max-width: 474px;
+   transform: translateX(-30%);
+   margin-top: 42px;
+}
+.right-video-preview{
+
+}
+.right-video-description{
+   max-width: 190px;
+}
+.generation-wrap{
+   align-items: center;
+   background-color: var(--black-bg);
+}
+.gen-title{
+   font-size: var(--headline-size);
+   color: var(--white-color);
+}
+.gen-subtitle{
+   color: var(--text-color);
+   font-size: var(--subheader);
+}
+.gen-play-btn{
+   justify-content: center;
+}
+.gallery{
+   padding-top: 110px;
+}
+.gall-wrap img{
+   border: 5px solid var(--bg-color);
+}
+.gallery-title{
+   font-size: var(--headline-size);
+}
+.gallery-desc{
+   color: var(--text-color);
+   font-weight: var(--text-weight);
+   padding-top: 40px;
+}
+.card-co {
+   max-width: 1200px;
+   padding: 1rem;
+   margin: 0 auto;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: repeat(12, 22.6px);
+   grid-template-rows: masonry;
+   grid-gap: 1rem;
+ }
+ 
+ .card-co  img {
+   object-fit: cover;
+   width: 100%;
+   height: 100%;
+ }
+ .gallery{
+   background: var(--second-bg-color);
+ }
+ .grid-item:nth-child(1) {
+   grid-row: 1 / 8;
+   grid-column: 1 / 3;
+ }
+ 
+ .grid-item:nth-child(2){
+   grid-row: 1 / 13;
+   grid-column: 3 / 3;
+}
+ 
+ .grid-item:nth-child(4) {
+   grid-row: 8 / 13;
+   grid-column: 1 / 3;
+ }
+ 
+ .grid-item:nth-child(3)  {
+   grid-row: 1 / 7;
+   grid-column: 4 / 4;
+ }
+ .grid-item:nth-child(5)  {
+   grid-row: 7 / 13;
+   grid-column: 4 / 4;
+ }
+ 
+.styling{
+   margin-top: 120px;
+   padding-bottom: 400px;
+   background-repeat: no-repeat;
+   background-position: bottom center;
+}
+.styling-text{
+   flex-direction: column;
+   align-items: center;
+}
+ .styling-title{
+    font-size: var(--headline-size);
+ }
+ .styling-play-btn{
+    margin-top: 44px;
+ }
+ .bottom-video{
+   padding-bottom: 110px;
+   padding-top: 100px;
+ }
+ .post-title{
+    max-width: 220px;
+    text-transform: uppercase;
+ }
+ .postDate{
+    font-size: var(--paragraph-text);
+    color: var(--text-color);
+ }
+ .btv-wrap {}
+ .card-img-left{
+ }
+ .post-title {
+    position: relative;
+    z-index: 3;
+ }
+ .post-video-img{
+    position: relative;
+    margin-left: -70px;
+ }
+   .footer-title{
+      color: #c3c3c3;
+      letter-spacing: 13px;
+      opacity: 0.4;
+   }
+ .footer-middle{
+    align-items: center;
+ }
+ .footer-item{
+    width: 33.3%;
+ }
+ .footer-social img{
+   max-width: 15px;
+   width: 15px !important;
+   max-height: 15px;
+   margin-left: 60px;
+ }
+ .footer-main-menu a{
+    color: var(--white-color);
+    font-size: 18px;
+ }
+ .footer-sub-menu a{
+   color: var(--text-color);
+   font-size: 15px;
+ }
+ .copywrite{
+    color: var(--bg-color);
+    font-size: 15px;
+ }
