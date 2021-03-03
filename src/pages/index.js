@@ -21,7 +21,7 @@ import playBtn from "../../static/play-button.svg"
 
 
 export default function Home({ data }) { //можно так а можно добавить пропс и извлечь все внутри компонента
-  let seo = data.wpPage;
+  // let seo = data.wpPage;
   const bgFunction = (url) => {
     let mainBackground = {
       backgroundImage: `url(${url})`
@@ -61,7 +61,7 @@ export default function Home({ data }) { //можно так а можно до�
   })
 
 
-  return (<PrimaryLayout title={seo.title} description={seo.seo.metaDesc}>
+  return (<PrimaryLayout >
     <section className="container main-container row" style={bgFunction(data.wpPage.acField.mainImage.sourceUrl)}>
       <div className="mine-title-wrap text-center col justify-content-center align-self-center">
         <h1 className="main-title">{data.wpPage.acField.mineTitle}</h1>
@@ -223,25 +223,8 @@ query MyQuery {
       date(locale: "ru", formatString: "MM DD, YY.")
     }
   }
-  wpPage(slug: {eq: "mazda"}) {
-    seo {
-      breadcrumbs {
-        text
-        url
-      }
-      canonical
-      cornerstone
-      focuskw
-      metaDesc
-      metaKeywords
-      metaRobotsNofollow
-      metaRobotsNoindex
-      opengraphAuthor
-      opengraphDescription
-      opengraphImage {
-        sourceUrl
-      }
-    }
+  wpPage(slug: {eq: "glavnaya"}) {
+   
     title
     slug
     acField {

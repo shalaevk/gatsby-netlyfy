@@ -11,7 +11,7 @@ const PrimaryLayout = (props) => {
 
    const data = useStaticQuery(graphql`
       query MenuQuery {
-         wpPage(slug: {eq: "mazda"}) {
+         wpPage(slug: {eq: "glavnaya"}) {
             acField {
                footerTitle
                leftFooterImg{
@@ -49,7 +49,7 @@ const PrimaryLayout = (props) => {
 
 
    return <>
-      <SEO title={props.title} description={props.description} />
+      <SEO />
       <Header menu={menu} />
       {props.children}
       <Footer menu={footerMenuArr} mainMenu={menu}
