@@ -14,6 +14,7 @@ import gatsby from "../../static/the_great_gatsby_trailer.jpg"
 import poster from "../../static/980583bb781c4cc5e3dfdcebbcb393e0.png"
 import poster_2 from "../../static/23d8e5fcbec3db55ddae3357ab8644d5.png"
 import playBtn from "../../static/play-button.svg"
+import decier from "../../static/decor-ieroglif.png"
 
 
 
@@ -22,6 +23,8 @@ import playBtn from "../../static/play-button.svg"
 
 export default function Home({ data }) { //можно так а можно добавить пропс и извлечь все внутри компонента
   // let seo = data.wpPage;
+
+
   const bgFunction = (url) => {
     let mainBackground = {
       backgroundImage: `url(${url})`
@@ -73,28 +76,59 @@ export default function Home({ data }) { //можно так а можно до�
         <div className="headline-title">
           {data.wpPage.acField.sectionTitle}
         </div>
-        <div className="description col-5 m-auto" dangerouslySetInnerHTML={{ __html: data.wpPage.acField.sectionDescription }} />
+        <div className="description col-xl-5 col-lg-7 m-auto" dangerouslySetInnerHTML={{ __html: data.wpPage.acField.sectionDescription }} />
       </div>
 
 
 
       <div className="video-wrap d-flex justify-content-center">
-        <div className="video-left-wrap d-flex justify-content-end">
+
+
+        <div className="video-left-wrap descktop-block  d-flex justify-content-end">
           <div className="video-text">
             <div className="left-video-title">{data.wpPage.acField.videotitle}</div>
-            <PlayBtnT func={"kk"} ></PlayBtnT>
-            <div className="decor"></div>
+            <div className="d-flex align-items-center justify-content-between">
+              <PlayBtnT func={"kk"} ></PlayBtnT>
+              <div className="decor-horisontal"></div>
+            </div>
+
             <div className="description left-video-description" dangerouslySetInnerHTML={{ __html: data.wpPage.acField.videodescription }}></div>
 
           </div>
-          <div className="video-img">
+          <div className="video-img d-flex align-items-center">
             <img className="play-btn" onClick={() => {
               showModal()
               setId(1)
             }} data-video="1" src={playBtn} alt="play button"></img>
-            <img src={poster} alt="poster" />
+            <img className="img-fluid" src={poster} alt="poster" />
           </div>
         </div>
+
+        <div className="video-left-wrap mobile-block d-flex justify-content-end " style={bgFunction(decier)}>
+          <div className="video-text">
+            <div className="left-video-title">{data.wpPage.acField.videotitle}</div>
+            <div className="video-img d-flex align-items-center">
+              <img className="play-btn" onClick={() => {
+                showModal()
+                setId(1)
+              }} data-video="1" src={playBtn} alt="play button"></img>
+              <img className="img-fluid" src={poster} alt="poster" />
+            </div>
+            <div className="description left-video-description" dangerouslySetInnerHTML={{ __html: data.wpPage.acField.videodescription }}></div>
+
+          </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -109,7 +143,7 @@ export default function Home({ data }) { //можно так а можно до�
               showModal()
               setId(2)
             }} data-video="1" src={playBtn} alt="play btn"></img>
-            <img className="right-video-preview" src={poster_2} alt="poster" />
+            <img className="right-video-preview img-fluid" src={poster_2} alt="poster" />
           </div>
           <div className="description right-video-description" dangerouslySetInnerHTML={{ __html: data.wpPage.acField.secondVideoDescription }}></div>
         </div>
@@ -124,7 +158,7 @@ export default function Home({ data }) { //можно так а можно до�
 
 
         <div className="gen-img left-img">
-          <img src={data.wpPage.acField.leftImg.sourceUrl} alt="engiene"></img>
+          <img className="img-fluid" src={data.wpPage.acField.leftImg.sourceUrl} alt="engiene"></img>
         </div>
 
         <div className="gen-title-wrap text-center">
@@ -137,7 +171,7 @@ export default function Home({ data }) { //можно так а можно до�
         </div>
 
         <div className="gen-img right-img">
-          <img src={data.wpPage.acField.rightImg.sourceUrl} alt="Author"></img>
+          <img className="img-fluid" src={data.wpPage.acField.rightImg.sourceUrl} alt="Author"></img>
         </div>
       </div>
     </section>
@@ -145,7 +179,7 @@ export default function Home({ data }) { //можно так а можно до�
       <div className="gallery-title text-center">
         {data.wpPage.acField.galleryTitle}
       </div>
-      <div className="gallery-desc col-5 m-auto text-center" dangerouslySetInnerHTML={{ __html: data.wpPage.acField.galleryDescription }}></div>
+      <div className="gallery-desc col-xl-5 col-lg-7 m-auto text-center" dangerouslySetInnerHTML={{ __html: data.wpPage.acField.galleryDescription }}></div>
       <div className="card-co">
         {imagesMap}
       </div>

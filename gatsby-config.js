@@ -13,7 +13,7 @@
 
 
 module.exports = {
-
+  pathPrefix: "/Gatsbys",
   siteMetadata: {
     title: 'Mazda vision',
     description: 'Global Website of Mazda Motor Corporation - brand stories, design and technology as well as company profile, IR and CSR.',

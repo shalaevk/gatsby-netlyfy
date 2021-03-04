@@ -17,8 +17,8 @@ const Post = (props) => {
       setState(false);
    }
 
-   return <div className="justify-content-center p-5">
-      <Row as="div">
+   return <div className="justify-content-center post-wrap p-5">
+      <Row as="div" className="post-container">
          <Card.Body>
             <Card.Title className="post-title">{props.title}</Card.Title>
             <span className="postDate">{new Date(props.date).toLocaleString('en', { month: 'long', day: 'numeric', year: 'numeric' })}</span>

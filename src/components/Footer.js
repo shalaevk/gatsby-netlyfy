@@ -7,7 +7,7 @@ import cls from "./Footer.module.css"
 
 const Footer = (props) => (
    <footer className={cls.footer}>
-      <div className="container-fluid ">
+      <div className="container-fluid footer-container">
          <div className="footer-title text-center">
             {props.title}
          </div>
