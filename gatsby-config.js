@@ -32,7 +32,7 @@ module.exports = {
   { resolve: `gatsby-transformer-remark` },
   {
     resolve: `gatsby-source-wordpress`, options: {
-      url: 'http://kirill.s-tet.top/graphql',
+      url: 'https://kirill.s-tet.top/graphql',
     }
   },
   {
