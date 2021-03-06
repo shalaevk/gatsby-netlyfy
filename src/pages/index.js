@@ -8,9 +8,6 @@ import Post from "../components/Post";
 import { Row } from 'react-bootstrap';
 import 'react-image-lightbox/style.css';
 import SEO from "../components/SEO";
-
-// import Post from "../components/Post";
-import gatsby from "../../static/the_great_gatsby_trailer.jpg"
 import poster from "../../static/980583bb781c4cc5e3dfdcebbcb393e0.png"
 import poster_2 from "../../static/23d8e5fcbec3db55ddae3357ab8644d5.png"
 import playBtn from "../../static/play-button.svg"
@@ -21,7 +18,7 @@ import decier from "../../static/decor-ieroglif.png"
 
 
 
-export default function Home({ data }) { //можно так а можно добавить пропс и извлечь все внутри компонента
+const Home = ({ data }) => { //можно так а можно добавить пропс и извлечь все внутри компонента
   // let seo = data.wpPage;
 
 
@@ -50,8 +47,10 @@ export default function Home({ data }) { //можно так а можно до�
     return <img className="grid-item" onClick={() => {
       setOpen(true)
       setIndex(key)
-    }} key={key} src={node.sourceUrl} alt="gallery-img" />
+    }} key={key} src={node.sourceUrl} alt="gallery-img" loading="lazy" />
   })
+
+  // const Lazymages = lazy(() => { import (imagesMap })
 
   const images = data.wpPage.acField.gallery.map((node) => {
     return node.sourceUrl
@@ -65,6 +64,7 @@ export default function Home({ data }) { //можно так а можно до�
 
 
   return (<PrimaryLayout >
+    <SEO />
     <section className="container main-container row" style={bgFunction(data.wpPage.acField.mainImage.sourceUrl)}>
       <div className="mine-title-wrap text-center col justify-content-center align-self-center">
         <h1 className="main-title">{data.wpPage.acField.mineTitle}</h1>
@@ -99,8 +99,8 @@ export default function Home({ data }) { //можно так а можно до�
             <img className="play-btn" onClick={() => {
               showModal()
               setId(1)
-            }} data-video="1" src={playBtn} alt="play button"></img>
-            <img className="img-fluid" src={poster} alt="poster" />
+            }} data-video="1" src={playBtn} alt="play button" loading="lazy" ></img>
+            <img className="img-fluid" src={poster} alt="poster" loading="lazy" />
           </div>
         </div>
 
@@ -111,8 +111,8 @@ export default function Home({ data }) { //можно так а можно до�
               <img className="play-btn" onClick={() => {
                 showModal()
                 setId(1)
-              }} data-video="1" src={playBtn} alt="play button"></img>
-              <img className="img-fluid" src={poster} alt="poster" />
+              }} data-video="1" src={playBtn} alt="play button" loading="lazy" ></img>
+              <img className="img-fluid" src={poster} alt="poster" loading="lazy" />
             </div>
             <div className="description left-video-description" dangerouslySetInnerHTML={{ __html: data.wpPage.acField.videodescription }}></div>
 
@@ -142,8 +142,8 @@ export default function Home({ data }) { //можно так а можно до�
             <img className="play-btn" onClick={() => {
               showModal()
               setId(2)
-            }} data-video="1" src={playBtn} alt="play btn"></img>
-            <img className="right-video-preview img-fluid" src={poster_2} alt="poster" />
+            }} data-video="1" src={playBtn} alt="play btn" loading="lazy" ></img>
+            <img className="right-video-preview img-fluid" src={poster_2} alt="poster" loading="lazy" />
           </div>
           <div className="description right-video-description" dangerouslySetInnerHTML={{ __html: data.wpPage.acField.secondVideoDescription }}></div>
         </div>
@@ -158,7 +158,7 @@ export default function Home({ data }) { //можно так а можно до�
 
 
         <div className="gen-img left-img">
-          <img className="img-fluid" src={data.wpPage.acField.leftImg.sourceUrl} alt="engiene"></img>
+          <img className="img-fluid" src={data.wpPage.acField.leftImg.sourceUrl} alt="engiene" loading="lazy" ></img>
         </div>
 
         <div className="gen-title-wrap text-center">
@@ -171,7 +171,7 @@ export default function Home({ data }) { //можно так а можно до�
         </div>
 
         <div className="gen-img right-img">
-          <img className="img-fluid" src={data.wpPage.acField.rightImg.sourceUrl} alt="Author"></img>
+          <img className="img-fluid" src={data.wpPage.acField.rightImg.sourceUrl} alt="Author" loading="lazy" ></img>
         </div>
       </div>
     </section>
@@ -307,3 +307,6 @@ query MyQuery {
 }
 
 `
+
+
+export default Home;

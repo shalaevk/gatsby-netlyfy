@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Nav, Button } from 'react-bootstrap';
+import { Navbar } from 'react-bootstrap';
 import { Link } from "gatsby";
 import logo from "../../static/logo.svg";
 import cls from "./Footer.module.css"
@@ -16,7 +16,7 @@ const Footer = (props) => (
                <img src={props.img} alt="mazda" ></img>
             </div>
             <div className="footer-logo text-center footer-item">
-               <Navbar.Brand as={Link} to="/"><img src={logo} /></Navbar.Brand>
+               <Navbar.Brand as={Link} to="/"><img src={logo} alt="Logo" /></Navbar.Brand>
             </div>
             <div className="footer-social text-right footer-item" dangerouslySetInnerHTML={{ __html: props.social }}></div>
          </div>

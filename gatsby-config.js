@@ -45,6 +45,7 @@ module.exports = {
       stripMetadata: true,
       defaultQuality: 50,
       failOnError: true,
+      toFormatBase64: true,
     },
   },
   {

@@ -32,7 +32,7 @@ const SEO = ({ description, lang, meta, title }) => {
          htmlAttributes={{
             lang,
          }}
-         title={title}
+         title={defaultTitle}
          titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
          meta={[
             {

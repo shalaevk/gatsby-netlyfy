@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import { Link } from "gatsby";
-import { Card, Col, Button, Nav, Row } from 'react-bootstrap';
+
+import { Card, Row } from 'react-bootstrap';
 import { PlayBtnT } from "../components/layouts/PlayBtn"
 import { Modal } from "../components/layouts/Modal"
 import playBtn from "../../static/play-button.svg"
 
 const Post = (props) => {
 
-   const [id, setId] = useState(0);
    const [show, setState] = useState(false);
 
+   const [id, setId] = useState(0);
    let showModal = () => {
       setState(true);
    }
@@ -25,10 +25,10 @@ const Post = (props) => {
             <PlayBtnT func={showModal} ></PlayBtnT>
          </Card.Body>
          <div className="post-video-img">
-            <Card.Img variant="left" src={props.image} alt="Gatsby" />
+            <Card.Img variant="left" src={props.image} alt="Gatsby" alt="Poster" />
             <img className="play-btn" onClick={() => {
                showModal()
-            }} data-video="1" src={playBtn}></img>
+            }} data-video="1" src={playBtn} alt="Play"></img>
          </div>
 
          {/* <Card.Text dangerouslySetInnerHTML={{ __html: props.excerpt }} />

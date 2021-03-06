@@ -44,7 +44,7 @@
       --second-paragraph: 12px;
     }
 }
-
+@media (max-width: 991px){
 /* Navbar */
 .navbar-light .navbar-toggler {
    color: #fff;
@@ -80,6 +80,8 @@
    padding-bottom: 80px;
 }
 /* Navbar finish */
+
+}
 
 
 
