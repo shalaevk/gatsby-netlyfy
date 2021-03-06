@@ -1,5 +1,5 @@
 import React from "react"
-import playBtnSM from "../../../static/playBtn-sm.svg"
+import playBtnSM from "../../../static/playbtn-sm.svg"
 
 
 
