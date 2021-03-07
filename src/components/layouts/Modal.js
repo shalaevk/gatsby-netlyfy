@@ -36,6 +36,7 @@ export const Modal = ({ handleClose, show, children }) => {
             <button className="close-btn" onClick={handleClose}>Close</button>
             <video autoplay="true" loop="true" controls width="100%" height="auto" type="video/mp4" >
                <source src={children} />
+               Your browser doesn't support videos!
             </video>
 
          </section>
