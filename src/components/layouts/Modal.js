@@ -34,7 +34,8 @@ export const Modal = ({ handleClose, show, children }) => {
       <div className={showHideClassName}>
          <section className='modal-main'>
             <button className="close-btn" onClick={handleClose}>Close</button>
-            <video width="100%" height="auto" src={children} autoplay={true} track={true} loop={true} controls type="video/mp4" >
+            <video autoplay="true" loop="true" controls width="100%" height="auto" type="video/mp4" >
+               <source src={children} />
             </video>
 
          </section>
