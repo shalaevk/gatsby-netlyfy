@@ -1,3 +1,36 @@
+@font-face {
+    font-family: "Mazda";
+    src: url(../font/Mazda.ttf);
+    font-style: normal;
+}
+@font-face {
+    font-family: "Mazda";
+    src: url(../font/Mazda-Type-Bold.ttf);
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Mazda";
+    src: url(../font/Mazda-Type-Medium.ttf);
+    font-style: normal;
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Mazda";
+    src: url(../font/Mazda-Type-Regular.ttf);
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Thuesday Night";
+    src: url(../font/TuesdayNight-Regular.otf);
+    font-style: normal;
+}
+
+
+
+
 :root {
    --white-color: #fff;
    --text-color: #909090;
@@ -140,7 +173,9 @@
 
 
 /* Modal Styles End */
-
+*{
+    font-family: Mazda, sans-serif;
+}
 body{
    min-height: 100vh;
    position: relative;
@@ -241,6 +276,7 @@ color: #c3c3c3;
 }
 .ikuo{
    font-size: 30px;
+    font-family: "Thuesday Night", sans-serif;
 }
 .video-left-wrap{
    width: 60%;
@@ -250,6 +286,7 @@ color: #c3c3c3;
    margin-left: 75px;
    padding-left: 35px;
    width: 40%;
+    padding-bottom: 90px;
 }
 .video-text{
 max-width: 350px;
@@ -298,6 +335,7 @@ max-width: 350px;
 .generation-wrap{
    align-items: center;
    background-color: var(--black-bg);
+
 }
 .gen-title{
    font-size: var(--headline-size);
@@ -330,7 +368,7 @@ max-width: 350px;
    margin: 0 auto;
    display: grid;
    grid-template-columns: repeat(4, 1fr);
-   grid-template-rows: repeat(12, 22.6px);
+   grid-template-rows: repeat(12, 25.6px);
    grid-template-rows: masonry;
    grid-gap: 1rem;
  }
@@ -503,6 +541,7 @@ max-width: 350px;
     padding-left: 0;
     border: none;
     position: relative;
+
 }
 .right-video-image {
    transform: translateX(0);
