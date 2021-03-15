@@ -234,7 +234,7 @@ const Home = ({ data }) => { //можно так а можно добавить 
         {data.wpPage.acField.stylingVideo}
       </Modal> : null
     }
-    <ContactForm/>
+
   </PrimaryLayout >
   )
 }
