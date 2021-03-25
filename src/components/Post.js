@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 import { Card, Row } from 'react-bootstrap';
-import { PlayBtnT } from "../components/layouts/PlayBtn"
-import { Modal } from "../components/layouts/Modal"
+import { PlayBtnT } from "./layouts/PlayBtn";
+import { Modal } from "./layouts/Modal";
 import playBtn from "../../static/play-button.svg"
 
 const Post = (props) => {
@@ -22,18 +22,14 @@ const Post = (props) => {
          <Card.Body>
             <Card.Title className="post-title">{props.title}</Card.Title>
             <span className="postDate">{new Date(props.date).toLocaleString('en', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
-            <PlayBtnT func={showModal} ></PlayBtnT>
+            <PlayBtnT lang={props.lang} func={showModal} />
          </Card.Body>
          <div className="post-video-img">
-            <Card.Img variant="left" src={props.image} alt="Gatsby" alt="Poster" />
+            <Card.Img variant="left" src={props.image}  alt="Poster" />
             <img className="play-btn" onClick={() => {
                showModal()
-            }} data-video="1" src={playBtn} alt="Play"></img>
+            }} data-video="1" src={playBtn} alt="Play"/>
          </div>
-
-         {/* <Card.Text dangerouslySetInnerHTML={{ __html: props.excerpt }} />
-            <Button variant="primary" as={Link} to={props.slug}>Go somewhere</Button> */}
-
 
       </Row>
 

@@ -1,41 +1,31 @@
-const { createFilePath } = require("gatsby-source-filesystem");
-const path = require("path")
-exports.onCreateNode = ({ node, getNode, actions }) => {
+const path = require(`path`)
+const languages = [
+   {
+      path: "/",
+      code: "en_US",
+      language: "en"
 
-   const { createNodeField } = actions;
+   },
+   {
+      path: "/ja",
+      code: "ja",
+      language: "ja"
 
-   if (node.internal.type === "allWpPost") {
-      const slug = createFilePath({ node, getNode, basePath: "markdown-pages" });
-      createNodeField({
-         node,
-         name: "slug",
-         value: slug
-      })
-   }
-}
-
-exports.createPages = ({ graphql, actions }) => {
-   const { createPage } = actions;
-
-   return graphql(`
-   query MyQuery {
-      allWpPost {
-        nodes {
-          title
-          content
-          excerpt
-          slug
-        }
-      }
-    }`).then(result => {
-      result.data.allWpPost.nodes.forEach((node) => {
-         createPage({
-            path: node.slug,
-            component: path.resolve('./src/components/layouts/BlogpostLayout.js'),
-            context: {
-               slug: node.slug
-            }
-         })
+   },
+]
+exports.createPages = async ({ actions: { createPage } }) => {
+   const HomepageTemplate = path.resolve("./src/components/layouts/Homepage.js")
+   languages.forEach(lang => {
+      createPage({
+         path: lang.path,
+         component: HomepageTemplate,
+         context: {
+            lang: lang.code,
+            language: lang.language
+         },
       })
    })
 }
+
+
+

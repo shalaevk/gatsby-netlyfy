@@ -18,8 +18,12 @@ export const Header = (props) => {
          <div className="btnWrap row">
             <Button className="findBtn">Find a Dealer</Button>
             <div className="lang">
-               <span>EN</span>
-               <img src={triangle} alt="triangle"></img>
+               <Link to="/"> EN </Link>
+               <Link to="/ja">日本</Link>
+
+
+
+               {/*<img src={triangle} alt="triangle"></img>*/}
             </div>
          </div>
       </Navbar.Collapse>

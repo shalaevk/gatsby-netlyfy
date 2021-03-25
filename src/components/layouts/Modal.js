@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useRef } from "react"
 
 
 // const App = () => {
@@ -29,12 +29,19 @@ import React from "react"
 export const Modal = ({ handleClose, show, children }) => {
    // console.log({ handleClose, show, children })
    const showHideClassName = show ? 'modal display-block' : 'modal display-none';
+   let videoRef = useRef(null);
+
+
+   let pauseVideo = () => {
+      handleClose()
+      videoRef.current.pause()
+   }
 
    return (
       <div className={showHideClassName}>
          <section className='modal-main'>
-            <button className="close-btn" onClick={handleClose}>Close</button>
-            <video autoplay="true" loop="true" controls width="100%" height="auto" type="video/mp4" >
+            <button className="close-btn" onClick={pauseVideo} >Close</button>
+            <video  ref={videoRef} autoplay="true" loop="true" controls width="100%" height="auto" type="video/mp4" >
                <source src={children} />
                Your browser doesn't support videos!
             </video>

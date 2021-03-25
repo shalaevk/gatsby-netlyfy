@@ -12,6 +12,9 @@ const PrimaryLayout = (props) => {
    const data = useStaticQuery(graphql`
       query MenuQuery {
          wpPage(slug: {eq: "glavnaya"}) {
+            locale {
+               locale
+            }
             acField {
                footerTitle
                leftFooterImg{
@@ -37,8 +40,9 @@ const PrimaryLayout = (props) => {
    }
    `)
 
-   let headerMenu = data.allWpMenu.edges.filter((edge) => edge.node.slug === 'main-menu')
-   let footerMenu = data.allWpMenu.edges.filter((edge) => edge.node.slug === 'footer-menu')
+   let headerMenu = props.menu.edges.filter((edge) => edge.node.slug === 'main-menu' || edge.node.slug === 'main-menu-ja')
+   let footerMenu = props.menu.edges.filter((edge) => edge.node.slug === 'footer-menu' || edge.node.slug === 'footer-menu-ja'  )
+
 
    const menu = headerMenu[0].node.menuItems.nodes.map((menuItem, index) => {
       return <Nav.Link key={index} as={Link} to={menuItem.path}>{menuItem.label}</Nav.Link>
@@ -53,10 +57,10 @@ const PrimaryLayout = (props) => {
       <Header menu={menu} />
       {props.children}
       <Footer menu={footerMenuArr} mainMenu={menu}
-         title={data.wpPage.acField.footerTitle}
-         img={data.wpPage.acField.leftFooterImg.sourceUrl}
-         social={data.wpPage.acField.footerSocial}
-         copy={data.wpPage.acField.copywrite}
+         title={props.title}
+         img={props.image}
+         social={props.footerSocial}
+         copy={props.copiright}
       />
    </>
 }
