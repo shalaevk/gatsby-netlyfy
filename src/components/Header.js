@@ -21,9 +21,6 @@ export const Header = (props) => {
                <Link to="/"> EN </Link>
                <Link to="/ja">日本</Link>
 
-
-
-               {/*<img src={triangle} alt="triangle"></img>*/}
             </div>
          </div>
       </Navbar.Collapse>
