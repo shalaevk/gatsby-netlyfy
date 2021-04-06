@@ -8,7 +8,10 @@
   padding-left: 8.5vw;
   padding-right: 8.5vw;
 }
-
+.copywrite{
+  margin-bottom: -30px;
+  padding-top: 20px;
+}
 @media (max-width: 694px){
   .footer{
   padding-left:0vw;

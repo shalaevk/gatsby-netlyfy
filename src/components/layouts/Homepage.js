@@ -16,6 +16,7 @@ import poster from "../../../static/980583bb781c4cc5e3dfdcebbcb393e0.png"
 import poster_2 from "../../../static/23d8e5fcbec3db55ddae3357ab8644d5.png"
 import playBtn from "../../../static/play-button.svg"
 import decier from "../../../static/decor-ieroglif.png"
+import decoimg from "../../images/deco-img.png"
 // import ContactForm from "../ContactForm"
 
 
@@ -76,13 +77,15 @@ const Home = ({data}) => { //можно так а можно добавить п
         <div className="mine-title-wrap text-center col justify-content-center align-self-center">
           <h1 className="main-title">{data.wpPage.acField.mineTitle}</h1>
           <p className="main-subtitle">{data.wpPage.acField.subtitle}</p>
+          <div className="decoimg">
+            <img className="img-fluid" src={decoimg}/>
+          </div>
         </div>
       </section>
       <section className="container-fluid video-section">
         <div className="title-wrap pt-6 text-center ">
-          <div className="headline-title">
-            {data.wpPage.acField.sectionTitle}
-          </div>
+          <div className="headline-title" dangerouslySetInnerHTML={{ __html: data.wpPage.acField.sectionTitle }}/>
+
           <div className="description col-xl-5 col-lg-7 m-auto" dangerouslySetInnerHTML={{ __html: data.wpPage.acField.sectionDescription }} />
         </div>
 

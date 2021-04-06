@@ -36,18 +36,23 @@ export const Modal = ({ handleClose, show, children }) => {
       handleClose()
       videoRef.current.pause()
    }
+if(show){
+   return (<div className={showHideClassName}>
+      <section className='modal-main'>
+         <button className="close-btn" onClick={pauseVideo}>Close</button>
+         <video ref={videoRef} autoPlay="true" loop="true" controls width="100%" height="auto" type="video/mp4">
+            <source src={children}/>
+            Your browser doesn't support videos!
+         </video>
 
+      </section>
+   </div>)
+}
+if(!show){
    return (
-      <div className={showHideClassName}>
-         <section className='modal-main'>
-            <button className="close-btn" onClick={pauseVideo} >Close</button>
-            <video  ref={videoRef} autoplay="true" loop="true" controls width="100%" height="auto" type="video/mp4" >
-               <source src={children} />
-               Your browser doesn't support videos!
-            </video>
-
-         </section>
-      </div>
+      <></>
    );
+}
+
 };
 

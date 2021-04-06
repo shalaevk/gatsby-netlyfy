@@ -18,8 +18,8 @@ export const Header = (props) => {
          <div className="btnWrap row">
             <Button className="findBtn">Find a Dealer</Button>
             <div className="lang">
-               <Link to="/"> EN </Link>
-               <Link to="/ja">日本</Link>
+               <Link activeClassName="active" to="/"> EN </Link>
+               <Link activeClassName="active" to="/ja">日本</Link>
 
             </div>
          </div>

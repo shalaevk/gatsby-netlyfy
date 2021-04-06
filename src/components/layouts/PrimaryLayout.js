@@ -8,7 +8,7 @@ import SEO from "../SEO"
 
 
 const PrimaryLayout = (props) => {
-
+   console.log(props.menu)
    const data = useStaticQuery(graphql`
       query MenuQuery {
          wpPage(slug: {eq: "glavnaya"}) {
@@ -18,7 +18,7 @@ const PrimaryLayout = (props) => {
             acField {
                footerTitle
                leftFooterImg{
-                   sourceUrl
+                  sourceUrl
                }
                footerSocial
                copywrite
@@ -28,20 +28,20 @@ const PrimaryLayout = (props) => {
             edges {
                node {
                   slug
-               menuItems {
-                  nodes {
-                     path
-                     label
+                  menuItems {
+                     nodes {
+                        path
+                        label
+                     }
                   }
                }
             }
          }
       }
-   }
    `)
 
-   let headerMenu = props.menu.edges.filter((edge) => edge.node.slug === 'main-menu' || edge.node.slug === 'main-menu-ja')
-   let footerMenu = props.menu.edges.filter((edge) => edge.node.slug === 'footer-menu' || edge.node.slug === 'footer-menu-ja'  )
+      let headerMenu = props.menu.edges.filter((edge) => edge.node.slug === 'main-menu' || edge.node.slug === 'main-menu-ja')
+      let footerMenu = props.menu.edges.filter((edge) => edge.node.slug === 'footer-menu' || edge.node.slug === 'footer-menu-ja')
 
 
    const menu = headerMenu[0].node.menuItems.nodes.map((menuItem, index) => {
