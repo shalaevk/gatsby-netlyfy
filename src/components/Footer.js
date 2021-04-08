@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar } from 'react-bootstrap';
 import { Link } from "gatsby";
-import logo from "../../static/logo.svg";
+import logo from "../../static/18mazda_logo_global_nav3.png";
 import cls from "./Footer.module.css"
 
 
@@ -28,6 +28,8 @@ const Footer = (props) => (
          </div>
          <div className="copywrite text-center">
             {props.copy}
+            <br/>
+            <a href="https://www.s-tet.com.ua/en/" className="copywrite copy-des" target="_blank" >DEVELOPED BY: ESTET DESIGN GROUP</a>
          </div>
       </div>
    </footer>
