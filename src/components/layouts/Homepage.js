@@ -189,7 +189,7 @@ const Home = ({ data }) => { //можно так а можно добавить 
           </div>
         </div>
       </section>
-      <section id='gal' className="gallery container-fluid">
+      <section id='gall' className="gallery container-fluid">
         <div className="gallery-title text-center">
           {data.wpPage.acField.galleryTitle}
         </div>
