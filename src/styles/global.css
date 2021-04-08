@@ -972,7 +972,7 @@ nav .navbar-brand img{
         background-position: 50% 100%;
         min-height: 70vh;
         padding-top: 240px;
-        padding-bottom: 160px;
+        padding-bottom: 180px;
         min-width: 100%;
         box-shadow: 0 0 5px 10px #4b4b4b;
     }
@@ -1008,7 +1008,10 @@ nav .navbar-brand img{
     .nav-link {
         width: 55%;
     }
- .navbar-brand img {
+ nav .navbar-brand img {
+        max-width: 65px;
+    }
+    .navbar-brand img {
         max-width: 65px;
     }
     .generation-wrap  .left-img{

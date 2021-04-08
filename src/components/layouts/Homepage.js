@@ -15,6 +15,7 @@ import poster_2 from "../../../static/23d8e5fcbec3db55ddae3357ab8644d5.png"
 import playBtn from "../../../static/play-button.svg"
 import decier from "../../../static/decor-ieroglif.png"
 import decoimg from "../../images/deco-img.png"
+import decoimg2 from "../../images/jap-vin.png"
 // import ContactForm from "../ContactForm"
 
 
@@ -22,6 +23,7 @@ const Home = ({ data }) => { //можно так а можно добавить 
                              // let seo = data.wpPage;
 
   console.log(data.wpPage.locale.locale)
+  let local = data.wpPage.locale.locale
   const bgFunction = (url) => {
     let mainBackground = {
       backgroundImage: `url(${url})`
@@ -75,7 +77,7 @@ const Home = ({ data }) => { //можно так а можно добавить 
           <h1 className="main-title">{data.wpPage.acField.mineTitle}</h1>
           <p className="main-subtitle">{data.wpPage.acField.subtitle}</p>
           <div className="decoimg">
-            <img className="img-fluid" src={decoimg}/>
+            {local == "en_US" ? <img className="img-fluid" src={decoimg}/> : <img className="img-fluid" src={decoimg2}/> }
           </div>
         </div>
       </section>
