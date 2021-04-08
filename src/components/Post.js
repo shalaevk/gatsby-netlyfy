@@ -6,7 +6,7 @@ import { Modal } from "./layouts/Modal";
 import playBtn from "../../static/play-button.svg"
 
 const Post = (props) => {
-
+console.log(props.date)
    const [show, setState] = useState(false);
 
    const [id, setId] = useState(0);
@@ -18,6 +18,7 @@ const Post = (props) => {
    }
 let postDate = () => {
   let date = new Date(props.date).toLocaleString('en', { month: 'long', day: 'numeric', year: 'numeric'})
+   console.log(date)
    return date
    }
 

@@ -16,7 +16,7 @@ export const Header = (props) => {
          </Nav>
 
          <div className="btnWrap row">
-            <Button as={Link} to="https://www.mazdausa.com/find-a-dealer" target="_blank" className="findBtn">Find a Dealer</Button>
+            <Button as="a" to="https://www.mazdausa.com/find-a-dealer" target="_blank" className="findBtn">Find a Dealer</Button>
             <div className="lang">
                <Link activeClassName="active" to="/"> EN </Link>
                <Link activeClassName="active" to="/ja">日本</Link>

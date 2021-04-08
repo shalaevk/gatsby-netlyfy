@@ -14,7 +14,7 @@ import poster from "../../../static/980583bb781c4cc5e3dfdcebbcb393e0.png"
 import poster_2 from "../../../static/23d8e5fcbec3db55ddae3357ab8644d5.png"
 import playBtn from "../../../static/play-button.svg"
 import decier from "../../../static/decor-ieroglif.png"
-import decoimg from "../../images/deco-img.png"
+import decoimg from "../../images/deco-img_1.png"
 import decoimg2 from "../../images/jap-vin.png"
 // import ContactForm from "../ContactForm"
 
@@ -22,7 +22,6 @@ import decoimg2 from "../../images/jap-vin.png"
 const Home = ({ data }) => { //можно так а можно добавить пропс и извлечь все внутри компонента
                              // let seo = data.wpPage;
 
-  console.log(data.wpPage.locale.locale)
   let local = data.wpPage.locale.locale
   const bgFunction = (url) => {
     let mainBackground = {
@@ -59,9 +58,12 @@ const Home = ({ data }) => { //можно так а можно добавить 
 
   const postData = data.allWpPost.nodes.map((node, index) => {
 
-    return <Post p="10" key={index} lang={data.wpPage.locale.locale} video={node.PostField.postVideo}
+    return (
+      <Post p="10" key={index} lang={data.wpPage.locale.locale} video={node.PostField.postVideo}
                  image={node.featuredImage.node.sourceUrl ? node.featuredImage.node.sourceUrl :
-                   ""} title={node.title} date={node.date} slug={node.slug} excerpt={node.excerpt}/>
+                   ""} title={node.title} date={node.date} slug={node.slug} excerpt={node.excerpt}
+    />
+    )
   })
 
 
@@ -81,6 +83,7 @@ const Home = ({ data }) => { //можно так а можно добавить 
           </div>
         </div>
       </section>
+
       <section id='tech' className="container-fluid video-section">
         <div className="title-wrap pt-6 text-center ">
           <div className="headline-title" dangerouslySetInnerHTML={{ __html: data.wpPage.acField.sectionTitle }}/>
@@ -306,7 +309,7 @@ export const query = graphql`
                         sourceUrl
                     }
                 }
-                date(locale: "ru", formatString: "MM, DD, YY.")
+                date(locale: "en")
             }
         }
         wpPage(slug: {eq: "glavnaya"} locale: {locale: {eq: $lang}}) {

@@ -223,7 +223,7 @@ body {
     width: 230px;
     margin-right: 0;
 }
-nav .navbar-brand img{
+nav .navbar-brand img, .navbar-brand img{
     max-width: 95px;
 }
 .navbar {
@@ -481,7 +481,10 @@ nav .navbar-brand img{
 }
 
 .decoimg {
-    display: none;
+    /*display: none;*/
+    position: absolute;
+    right: 10%;
+    top: 160%;
 }
 
 .card-co img {
@@ -805,6 +808,7 @@ nav .navbar-brand img{
         max-width: 180px;
         position: absolute;
         right: 0;
+        top: 100%;
     }
 
     .video-wrap {
@@ -1008,7 +1012,7 @@ nav .navbar-brand img{
     .nav-link {
         width: 55%;
     }
- nav .navbar-brand img {
+ nav .navbar-brand img, .navbar-brand img {
         max-width: 65px;
     }
     .navbar-brand img {
@@ -1016,6 +1020,9 @@ nav .navbar-brand img{
     }
     .generation-wrap  .left-img{
         padding-bottom: 30px;
+    }
+    .main-title{
+        margin-bottom: 30px;
     }
 }
 
