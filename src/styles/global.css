@@ -28,7 +28,9 @@
     font-style: normal;
 }
 
-
+*{
+    font-size: 18px;
+}
 
 
 :root {
@@ -45,6 +47,8 @@
    --text-weight: 400;
    --title: 30px;
    --subheader: 20px;
+    --just-text: 18px;
+
 
    --signature-font: "Tuesday Night";
    
@@ -76,6 +80,10 @@
       --paragraph-text: 14px;
       --second-paragraph: 12px;
     }
+}
+.nav-link{
+    font-size :var(--just-text);
+    letter-spacing: 0.9px;
 }
 @media (max-width: 991px){
 /* Navbar */
@@ -133,6 +141,7 @@
       text-transform: uppercase;
       font-size: 16px;
       min-width: 90px;
+    letter-spacing: 0.8px;
 }
 .playBtn:hover{
    opacity: 0.7;
@@ -155,7 +164,6 @@
 }
  .modal-main {
      position:fixed;
-     background: white;
      width: 80%;
      height: auto;
      top:50%;
@@ -226,6 +234,11 @@ padding-right: 7px;
    background-color: var(--text-color);
    border: none;
    margin-right: 20px;
+    transition: all 0.3s;
+}
+.findBtn:hover{
+  opacity: 0.7;
+    background-color: var(--text-color);
 }
 .btnWrap{
    align-items: baseline;
@@ -252,6 +265,7 @@ color: #c3c3c3;
    max-width: 13em;
    margin: 0 auto;
    line-height: 60px;
+    letter-spacing: 4px;
 }
 .title-wrap{
    margin: 0 auto;
@@ -279,9 +293,11 @@ color: #c3c3c3;
    color: var(--white-color);
    text-transform: uppercase;
    margin-bottom: 15px;
+    letter-spacing: 3px;
 }
 .left-video-description{
-   color: var(--text-color)
+   color: var(--text-color);
+    padding-right: 10px;
 }
 .video-left-wrap, .video-right-wrap {
    flex-wrap: nowrap;
@@ -301,7 +317,7 @@ color: #c3c3c3;
     padding-bottom: 90px;
 }
 .video-text{
-max-width: 350px;
+max-width: 400px;
 }
 .video-img{
    position: relative;
@@ -352,10 +368,12 @@ max-width: 350px;
 .gen-title{
    font-size: var(--headline-size);
    color: var(--white-color);
+    letter-spacing: 4px;
 }
 .gen-subtitle{
    color: var(--text-color);
    font-size: var(--subheader);
+    letter-spacing: 2px;
 }
 .gen-play-btn{
    justify-content: center;
@@ -368,6 +386,7 @@ max-width: 350px;
 }
 .gallery-title{
    font-size: var(--headline-size);
+    letter-spacing: 4px;
 }
 .gallery-desc{
    color: var(--text-color);
@@ -436,6 +455,7 @@ max-width: 350px;
  .styling-title{
     font-size: var(--headline-size);
      padding-bottom: 20px;
+     letter-spacing: 4px;
  }
  .styling-play-btn{
    color: #C3C3C3;
@@ -453,6 +473,10 @@ max-width: 350px;
  .postDate{
     font-size: var(--paragraph-text);
     color: var(--text-color);
+
+ }
+ .bottom-video .playBtn {
+     margin-top: 17px;
  }
  .btv-wrap {}
  .card-img-left{
@@ -460,6 +484,7 @@ max-width: 350px;
  .post-title {
     position: relative;
     z-index: 3;
+     letter-spacing: 2px;
  }
  .post-video-img{
     position: relative;
@@ -497,6 +522,8 @@ max-width: 350px;
  .copywrite{
     color: var(--bg-color);
     font-size: 15px;
+     margin-bottom: -30px;
+     padding-top: 20px;
  }
 
  @media (max-width: 1440px){
@@ -641,6 +668,7 @@ flex-direction: column;
    }
    .footer-img img{
       width: 100%;
+       margin-left: -5%;
    }
    .footer-main-menu {
       display: none !important;
