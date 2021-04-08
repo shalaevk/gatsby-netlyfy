@@ -501,6 +501,9 @@ max-width: 400px;
  .footer-item{
     width: 33.3%;
  }
+.footer-img img{
+    margin-left: -5%;
+}
  .footer-social img{
    max-width: 15px;
    width: 15px !important;
@@ -668,7 +671,6 @@ flex-direction: column;
    }
    .footer-img img{
       width: 100%;
-       margin-left: -5%;
    }
    .footer-main-menu {
       display: none !important;
