@@ -218,7 +218,9 @@ body {
 .navbar-brand {
     width: 230px;
 }
-
+.navbar-brand img{
+    max-width: 95px;
+}
 .navbar {
     color: var(--white-color);
     background-color: transparent;

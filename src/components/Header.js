@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../static/lo5go.png";
+import logo from "../../static/logo.png";
 import triangle from "../../static/triangle.svg"
 import { Link } from "gatsby";
 import { Navbar, Nav, Button } from 'react-bootstrap';
