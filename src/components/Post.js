@@ -16,12 +16,17 @@ const Post = (props) => {
    let hideModal = () => {
       setState(false);
    }
+let postDate = () => {
+  let date = new Date(props.date).toLocaleString('en', { month: 'long', day: 'numeric', year: 'numeric'})
+   return date
+   }
+
 
    return <div className="justify-content-center post-wrap p-5">
       <Row as="div" className="post-container">
          <Card.Body>
             <Card.Title className="post-title">{props.title}</Card.Title>
-            <span className="postDate">{new Date(props.date).toLocaleString('en', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
+            <span className="postDate">{postDate()}</span>
             <PlayBtnT lang={props.lang} func={showModal} />
          </Card.Body>
          <div className="post-video-img">

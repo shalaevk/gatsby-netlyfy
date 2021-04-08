@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../static/logo.svg";
+import logo from "../../static/lo5go.png";
 import triangle from "../../static/triangle.svg"
 import { Link } from "gatsby";
 import { Navbar, Nav, Button } from 'react-bootstrap';
@@ -16,7 +16,7 @@ export const Header = (props) => {
          </Nav>
 
          <div className="btnWrap row">
-            <Button className="findBtn">Find a Dealer</Button>
+            <Button as={Link} to="https://www.mazdausa.com/find-a-dealer" className="findBtn">Find a Dealer</Button>
             <div className="lang">
                <Link activeClassName="active" to="/"> EN </Link>
                <Link activeClassName="active" to="/ja">日本</Link>
