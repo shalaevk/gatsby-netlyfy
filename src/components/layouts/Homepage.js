@@ -27,7 +27,7 @@ const Home = ({ data }) => { //можно так а можно добавить 
     let mainBackground = {
       backgroundImage: `url(${url})`
     }
-    return mainBackground;
+    return mainBackground
   }
 
 
