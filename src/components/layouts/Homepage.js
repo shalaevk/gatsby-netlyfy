@@ -14,8 +14,8 @@ import poster from "../../../static/980583bb781c4cc5e3dfdcebbcb393e0.png"
 import poster_2 from "../../../static/23d8e5fcbec3db55ddae3357ab8644d5.png"
 import playBtn from "../../../static/play-button.svg"
 import decier from "../../../static/decor-ieroglif.png"
-import decoimg from "../../images/deco-img_1.png"
-import decoimg2 from "../../images/jap-vin.png"
+import decoimg from "../../images/decor-img.png"
+import decoimg2 from "../../images/jap-vinn.png"
 // import ContactForm from "../ContactForm"
 
 
